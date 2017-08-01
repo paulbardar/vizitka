@@ -531,6 +531,17 @@ button {
 .ba-about-me {
 	padding: 40px 0 40px;
 	background-color: @seven-color;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-bottom: 7%;
+		background-color: @seven-color;
+		clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	}
 	header {
 		text-align: center;
 		color: spin(@fourth-color, 60deg);
@@ -591,7 +602,7 @@ button {
 // ba-my-trainings
 
 .ba-my-trainings {
-	padding: 40px 0 40px;
+	padding: 80px 0 40px;
 	position: relative;
 	&__title {
 		position: relative;

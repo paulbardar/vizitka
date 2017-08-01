@@ -1228,6 +1228,18 @@ button.ba-accordion.active:after {
 .ba-about-me {
   padding: 40px 0 40px;
   background-color: #efdbc3;
+  position: relative;
+}
+.ba-about-me:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding-bottom: 7%;
+  background-color: #efdbc3;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 .ba-about-me header {
   text-align: center;
@@ -1305,7 +1317,7 @@ button.ba-accordion.active:after {
   }
 }
 .ba-my-trainings {
-  padding: 40px 0 40px;
+  padding: 80px 0 40px;
   position: relative;
 }
 .ba-my-trainings__title {
