@@ -604,6 +604,9 @@ button {
 .ba-my-trainings {
 	padding: 80px 0 40px;
 	position: relative;
+	@media (max-width: @small-breakpoint) {
+		padding-top: 40px;
+	}
 	&__title {
 		position: relative;
 		text-align: center;
@@ -627,7 +630,7 @@ button {
 			@media (max-width: @small-breakpoint) {
 				font-size: 26px;
 				&:after {
-					top: 40px;
+					top: 35px;
 					width: 200px;
 				}
 			}
