@@ -1236,7 +1236,7 @@ button.ba-accordion.active:after {
   top: 100%;
   left: 0;
   right: 0;
-  padding-bottom: 7%;
+  padding-bottom: 4%;
   background-color: #efdbc3;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
