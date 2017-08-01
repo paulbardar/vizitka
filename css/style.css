@@ -1320,6 +1320,11 @@ button.ba-accordion.active:after {
   padding: 80px 0 40px;
   position: relative;
 }
+@media (max-width: 480px) {
+  .ba-my-trainings {
+    padding-top: 40px;
+  }
+}
 .ba-my-trainings__title {
   position: relative;
   text-align: center;
@@ -1348,7 +1353,7 @@ button.ba-accordion.active:after {
     font-size: 26px;
   }
   .ba-my-trainings__title h3:after {
-    top: 40px;
+    top: 35px;
     width: 200px;
   }
 }
