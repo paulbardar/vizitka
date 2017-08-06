@@ -26,5 +26,15 @@
     	body.classList.toggle('ba-menu-open');
     }
 
+    $('.ba-slider').slick({
+    	arrows: false,
+    	dots: true,
+    	infinite: true,
+		prevArrow: false,
+  		nextArrow:false,
+  		autoplay: true,
+  		autoplaySpeed: 6000
+    });
+
 
 })(jQuery);

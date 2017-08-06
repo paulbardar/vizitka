@@ -111,6 +111,15 @@ textarea {
 // ba-header
 .ba-header {
 	background-color: #282f35;
+	&__block {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		@media (max-width: @medium-breakpoint) {
+			justify-content: space-around;
+		}
+	}
+
 }
 // ba-nav
 .ba-nav {
@@ -240,14 +249,11 @@ textarea {
 // .ba-presentation-block
 
 .ba-presentation-block {
-	// height: 300px;
-	// background: url(../img/sl_2.jpg) 50% 50% no-repeat;
-	// background-size: cover;
-	// padding: 30px 0 45px;
-	// background-color: @header-background;
-	background: linear-gradient( 135deg, @header-background, rgba(0,0,0,0.4));
-	@media (max-width: @large-breakpoint) {
-		padding-bottom: 30px;
+	background: url(../img/kate.png) bottom right no-repeat, linear-gradient( 135deg, @header-background, rgba(0,0,0,0.4));
+	padding-top: 30px;
+	@media (max-width: @small-breakpoint) {
+		background: linear-gradient( 135deg, @header-background, rgba(0,0,0,0.4));
+		padding-left: 20px;
 	}
 	@media (max-width: 600px) {
 		.ba-container {
@@ -257,114 +263,20 @@ textarea {
 	}
 }
 .ba-header__textblock {
-	padding: 30px 0 45px;
+	padding: 30px 0 10px;
 	min-height: 300px;
 	padding-right: 20px;
-	background: url(../img/kate.png) bottom right no-repeat;
 	position: relative;
-	@media (max-width: @large-breakpoint) {
-		padding-bottom: 150px;
-		background: url(../img/kate.png) top right no-repeat;
-		// background-size: 50%;
-	}
-
-	@media (max-width: 690px) {
-		padding-bottom: 242px;
-	}
-	@media (max-width: 500px) {
-		background-position: 50px 0;
-	}
-}
-.ba-tel {
-	margin-top: 20px;
-	background-color: @fifth-color;
-	background: linear-gradient(to right, @fifth-color, darken(@fifth-color, 30%));
-	border-radius: 6px;
-	a {
-		display: block;
-		text-align: right;
-		text-decoration: none;
-		color: @fourth-color;
-		font-size: 38px;
-		font-style: italic;
-		font-weight: bold;
-		padding-left: 20px;
-		padding-right: 25px;
-		margin-bottom: 10px;
-		transition: all 0.4s ease-in;
-		&:hover,
-		&:active {
-			color: saturate(@fourth-color, 40%);
-		}
-	}
-	@media (max-width: @large-breakpoint) {
-		float: none;
-		display: block;
-		position: absolute;
-		bottom: 0;
-		a {
-			margin-bottom: 0;
-		}
-	}
-	@media (max-width: 690px) {
-		width: 100%;
-		margin-top: 0;
-		a {
-			text-align: center;
-			@media (max-width: 600px) {
-				font-size: 30px;
-			}
-		}
-	}
-}
-.ba-email {
-	margin-top: 23px;
-	padding: 9px 5px 9px 0;
-	background-color: @seven-color;
-	background: linear-gradient(to right,@seven-color, darken(@seven-color, 30%));
-	a {
-		color: @six-color;
-		font-size: 28px;
-		font-style: italic;
-		font-weight: bold;
-		display: block;
-		text-decoration: none;
-		text-align: right;
-		&:hover,
-		&:active {
-			color: lighten(@six-color, 20%);
-		}
-	}
-	@media (max-width: @large-breakpoint) {
-		float: none;
-		display: block;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		padding-top: 16px;
-	}
-	@media (max-width: 690px) {
-		bottom: 100px;
-		width: 100%;
-		a {
-			text-align: center;
-			@media (max-width: 600px) {
-				font-size: 20px;
-			}
-		}
-	}
-	@media (max-width: 600px) {
-		bottom: 80px;
-	}
 
 }
+
 
 
 // ba-about-me
 .ba-my-info {
-	text-align: center;
+	text-align: left;
 	&__name {
-		font-size: 60px;
+		font-size: 25px;
 		color: @name-color;
 		font-style: italic;
 		text-transform: uppercase;
@@ -372,7 +284,8 @@ textarea {
 		margin-top: 0;
 		line-height: 1;
 		@media (max-width: 600px) {
-			font-size: 40px;
+			font-size: 30px;
+			max-width: 250px;
 		}
 	}
 	&__proffessian {
@@ -382,11 +295,20 @@ textarea {
 		font-style: italic;
 		font-weight: bold;
 		max-width: 260px;
-		margin: 0 auto;
 		line-height: 1;
 	}
 }
-
+// ba-slogan
+.ba-slogan {
+	max-width: 550px;
+	p {
+		font-size: 30px;
+		margin-top: 0;
+		line-height: 1.5;
+		font-weight: bold;
+		color: @primary-color;
+	}
+}
 
 // ba-work-section
 
@@ -398,12 +320,12 @@ textarea {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	&__item {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		width: 30%;
+		width: 20%;
 		@media (max-width: @medium-breakpoint) {
 			width: 100%;
 		}
@@ -413,7 +335,7 @@ textarea {
 button {
 	&.ba-accordion {
 		position: relative;
-		width: 300px;
+		width: 200px;
 		min-height: 90px;
 		text-align: center;
 		border: none;
@@ -430,17 +352,17 @@ button {
 		&:after {
 			position: absolute;
 			content: " ";
-			top: 40%;
-			right: 5px;
+			bottom: 5px;
+			right: 5%;
 			width: 0;
 			height: 0;
 			border-right: 6px solid transparent;
 			border-left: 6px solid transparent;
-			border-top: 10px solid #000000;
+			border-top: 10px solid @fourth-color;
 			transition: all 0.4s ease-in;
 		}
 		@media (max-width: @large-breakpoint) {
-			width: 240px;
+			width: 200px;
 		}
 		@media (max-width: @medium-breakpoint) {
 			width: 100%;
@@ -472,8 +394,31 @@ button {
 // ba-direction
 
 .ba-direction {
+	position: relative;
 	padding: 30px;
 	background-color: @third-color;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 10;
+		bottom: 100%;
+		left: 0;
+		right: 0;
+		padding-top: 2%;
+		background-color: @third-color;
+		clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 10;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-bottom: 2%;
+		background-color: @third-color;
+		clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+	}
 }
 .ba-direction__title {
 	text-align: center;
@@ -604,6 +549,17 @@ button {
 .ba-my-trainings {
 	padding: 80px 0 40px;
 	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 10;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-top: 2%;
+		background-color: #ffffff;
+		clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+	}
 	@media (max-width: @small-breakpoint) {
 		padding-top: 40px;
 	}
@@ -663,11 +619,101 @@ button {
 	}
 }
 
+@import "slick.less";
+@import "_slider.less";
+
+// ba-feedbacks
+.ba-feedbacks {
+	padding: 50px 0;
+	background-color: yellow;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 10;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-top: 2%;
+		background-color: yellow;
+		clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+	}
+}
+
+// ba-my-contacts
+.ba-my-contacts {
+	padding: 40px 0;
+	background-color: lighten(purple, 40%);
+	&__title {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	&__block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		@media (max-width: 600px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+.ba-tel {
+	margin-top: 20px;
+	padding: 10px 5px 10px 0;
+	a {
+		display: block;
+		font-size: 22px;
+		text-align: right;
+		text-decoration: none;
+		color: @fourth-color;
+		font-style: italic;
+		font-weight: bold;
+		padding-left: 20px;
+		padding-right: 25px;
+		transition: all 0.4s ease-in;
+		&:hover,
+		&:active {
+			color: saturate(@fourth-color, 40%);
+		}
+	}
+}
+.ba-email {
+	margin-top: 20px;
+	padding: 10px 5px 10px 0;
+	a {
+		color: @six-color;
+		font-size: 22px;
+		font-style: italic;
+		font-weight: bold;
+		display: block;
+		text-decoration: none;
+		text-align: right;
+		&:hover,
+		&:active {
+			color: lighten(@six-color, 20%);
+		}
+	}
+}
 
 // ba-footer
 .ba-footer {
+	position: relative;
 	padding: 30px 0;
 	background-color: #282f35;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 10;
+		bottom: 99%;
+		left: 0;
+		right: 0;
+		padding-top: 2%;
+		background-color: #282f35;
+		clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+	}
 }
 .ba-footer__content {
 	display: flex;
@@ -687,18 +733,25 @@ button {
 	}
 }
 .ba-sociallink {
-	@media (max-width: 445px) {
-		margin: 0 auto;
+	&__footer {
+		@media (max-width: 445px) {
+			margin: 0 auto;
+		}
+
 	}
 	&__fb {
 		display: block;
 		width: 36px;
 		height: 34px;
+		margin-top: 10px;
 		background-repeat: no-repeat;
 		background-position: 50%;
 		background-image: url(../img/facebook-icon.png);
 		@media (max-width: 445px) {
 			margin: 0;
+		}
+		&--footer {
+			margin-top: 0;
 		}
 	}
 }
