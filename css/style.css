@@ -956,7 +956,6 @@ select {
   font-size: 25px;
   color: #e34c07;
   font-style: italic;
-  text-transform: uppercase;
   font-weight: bold;
   margin-top: 0;
   line-height: 1;
@@ -970,7 +969,6 @@ select {
 .ba-my-info__proffessian {
   font-size: 18px;
   color: #637778;
-  text-transform: uppercase;
   font-style: italic;
   font-weight: bold;
   max-width: 260px;
