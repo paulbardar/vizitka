@@ -1,0 +1,80 @@
+.ba-slider {
+	position: relative;
+	.slick-dots {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		top: 95%;
+		left: 0;
+		right: 0;
+		margin-top: 20px;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin-left: 30px;
+			button {
+				border: none;
+				font-size: 0;
+				width: 12px;
+				height: 12px;
+				min-height: 12px;
+				padding: 0;
+				border-radius: 50%;
+				background-color: darken(@secondary-color, 40%);
+				outline: none;
+				box-shadow: none;
+				&:hover {
+					background-color: darken(@secondary-color, 20%);
+				}
+			}
+			&.slick-active {
+				button {
+					background-color: darken(@secondary-color, 10%);
+				}
+
+			}
+		}
+	}
+}
+.ba-slide {
+	position: relative;
+	&:focus {
+		outline: none;
+	}
+	&__content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__img {
+		margin: 50px;
+		img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+		@media(max-width: 566px) {
+			margin: 15px;
+		}
+		@media(max-width: 556px) {
+			width: 100%;
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+	&__textblock {
+		max-width: 60%;
+		@media(max-width: 556px) {
+			max-width: 100%;
+			h4 {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+}
